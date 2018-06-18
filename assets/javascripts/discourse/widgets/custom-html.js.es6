@@ -2,7 +2,7 @@ import { createWidget } from 'discourse/widgets/widget';
 
 export default createWidget('custom-html', {
   tagName: 'div.custom-html.widget-container',
-  buildKey: () => 'custom-html',
+  buildKey: () => 'sag',
 
   defaultState() {
     return {
