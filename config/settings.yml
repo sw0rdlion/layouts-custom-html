@@ -1,4 +1,4 @@
 plugins:
-  layouts_custom_html:
+  layouts_html:
     default: ''
     client: true
