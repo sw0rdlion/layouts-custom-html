@@ -1,8 +1,8 @@
 import { createWidget } from 'discourse/widgets/widget';
 
-export default createWidget('custom-html', {
-  tagName: 'div.custom-html.widget-container',
-  buildKey: () => 'custom-html',
+export default createWidget('html', {
+  tagName: 'div.html.widget-container',
+  buildKey: () => 'html',
 
   defaultState() {
     return {
@@ -15,12 +15,12 @@ export default createWidget('custom-html', {
       let html = this.siteSettings.layouts_custom_html;
 
       const category = attrs.category;
-      if (category && category.layouts_custom_html) {
-        html = category.layouts_custom_html;
+      if (category && category.layouts_html) {
+        html = category.layouts_html;
       }
 
       Ember.run.scheduleOnce('afterRender', this, function() {
-        $("div.custom-html").append(`<div class='contents'>${html}</div>`);
+        $("div.html").append(`<div class='contents'>${html}</div>`);
       });
       state.renderScheduled = true;
     }
